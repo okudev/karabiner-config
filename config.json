@@ -1,105 +1,14 @@
 {
-  "title": "Ergo-layer",
+  "title": "Layer",
+  "maintainer": [
+    "oku"
+  ],
   "rules": [
     {
-      "description": "Layer",
+      "description": "Layer test",
       "manipulators": [
         {
-          "from": {
-            "key_code": "left_command"
-          },
-          "to": [
-            {
-              "key_code": "left_control"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "u",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "up_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
+          "type": "basic",
           "from": {
             "key_code": "n",
             "modifiers": {
@@ -113,16 +22,85 @@
               "key_code": "left_arrow"
             }
           ],
-          "type": "basic"
-        },
-        {
           "conditions": [
             {
-              "name": "caps_lock pressed",
               "type": "variable_if",
+              "name": "caps_lock pressed",
               "value": 1
             }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
           ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock pressed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock pressed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock pressed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "from": {
             "key_code": "i",
             "modifiers": {
@@ -136,157 +114,16 @@
               "key_code": "right_arrow"
             }
           ],
-          "type": "basic"
-        },
-        {
           "conditions": [
             {
-              "name": "caps_lock pressed",
               "type": "variable_if",
+              "name": "caps_lock pressed",
               "value": 1
             }
-          ],
-          "from": {
-            "key_code": "t",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_control"
-            }
-          ],
-          "type": "basic"
+          ]
         },
         {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "s",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_shift"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "semicolon",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_or_backspace"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": "command"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": "command"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "y",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": "command"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
+          "type": "basic",
           "from": {
             "key_code": "spacebar",
             "modifiers": {
@@ -300,16 +137,16 @@
               "key_code": "return_or_enter"
             }
           ],
-          "type": "basic"
-        },
-        {
           "conditions": [
             {
-              "name": "caps_lock pressed",
               "type": "variable_if",
+              "name": "caps_lock pressed",
               "value": 1
             }
-          ],
+          ]
+        },
+        {
+          "type": "basic",
           "from": {
             "key_code": "h",
             "modifiers": {
@@ -323,18 +160,18 @@
               "key_code": "tab"
             }
           ],
-          "type": "basic"
-        },
-        {
           "conditions": [
             {
-              "name": "caps_lock pressed",
               "type": "variable_if",
+              "name": "caps_lock pressed",
               "value": 1
             }
-          ],
+          ]
+        },
+        {
+          "type": "basic",
           "from": {
-            "key_code": "quote",
+            "key_code": "h",
             "modifiers": {
               "optional": [
                 "any"
@@ -343,10 +180,89 @@
           },
           "to": [
             {
-              "key_code": "caps_lock"
+              "key_code": "tab"
             }
           ],
-          "type": "basic"
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock pressed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock pressed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock pressed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "caps_lock pressed",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "caps_lock pressed",
+                "value": 0
+              }
+            }
+          ]
         }
       ]
     }
